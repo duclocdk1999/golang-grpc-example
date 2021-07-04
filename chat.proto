@@ -1,0 +1,14 @@
+syntax = "proto3";
+package chat;
+
+// option go_package="/media/oppa/DATA/courses/dev/language/golang/microservices/grpc-02";
+option go_package="https://github.com/duclocdk1999/golang-grpc-example.git;golang_grpc_example_git";
+
+
+message Message {
+    string body = 1;
+}
+
+service ChatService {
+    rpc SayHello(Message) returns (Message) {   }
+}
